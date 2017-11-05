@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PinCardModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="PinCardEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AverageCommissionCosts" EntityType="PinCardModel.AverageCommissionCost" />
+    <EntitySet Name="Configurations" EntityType="PinCardModel.Configuration" />
+    <EntitySet Name="Consolidators" EntityType="PinCardModel.Consolidator" />
+    <EntitySet Name="Inventorys" EntityType="PinCardModel.Inventory" />
+    <EntitySet Name="MinInventorys" EntityType="PinCardModel.MinInventory" />
+    <EntitySet Name="PincardCosts" EntityType="PinCardModel.PincardCost" />
+    <EntitySet Name="PincardNominals" EntityType="PinCardModel.PincardNominal" />
+    <EntitySet Name="PinCards" EntityType="PinCardModel.PinCard" />
+    <EntitySet Name="PinCardTypes" EntityType="PinCardModel.PinCardType" />
+    <EntitySet Name="Providers" EntityType="PinCardModel.Provider" />
+    <EntitySet Name="ServiceConsolidators" EntityType="PinCardModel.ServiceConsolidator" />
+    <EntitySet Name="Services" EntityType="PinCardModel.Service" />
+    <EntitySet Name="Tariffs" EntityType="PinCardModel.Tariff" />
+    <EntitySet Name="TariffNominals" EntityType="PinCardModel.TariffNominal" />
+    <EntitySet Name="Thresholds" EntityType="PinCardModel.Threshold" />
+    <EntitySet Name="ThresholdNominals" EntityType="PinCardModel.ThresholdNominal" />
+    <EntitySet Name="Transhists" EntityType="PinCardModel.Transhist" />
+    <EntitySet Name="UPGServices" EntityType="PinCardModel.UPGService" />
+    <EntitySet Name="UPGServicePincardCosts" EntityType="PinCardModel.UPGServicePincardCost" />
+    <EntitySet Name="UPGServiceServices" EntityType="PinCardModel.UPGServiceService" />
+    <EntitySet Name="View_ReportInventorys" EntityType="PinCardModel.View_ReportInventorys" />
+    <EntitySet Name="View_ReportPincard" EntityType="PinCardModel.View_ReportPincard" />
+    <EntitySet Name="View_SearchPinCards" EntityType="PinCardModel.View_SearchPinCards" />
+    <AssociationSet Name="FK_AverageCommissionCosts_PincardCosts" Association="PinCardModel.FK_AverageCommissionCosts_PincardCosts">
+      <End Role="PincardCosts" EntitySet="PincardCosts" />
+      <End Role="AverageCommissionCosts" EntitySet="AverageCommissionCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AverageCommissionCosts_ServiceConsolidators" Association="PinCardModel.FK_AverageCommissionCosts_ServiceConsolidators">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="AverageCommissionCosts" EntitySet="AverageCommissionCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceConsolidators_ServiceConsolidators" Association="PinCardModel.FK_ServiceConsolidators_ServiceConsolidators">
+      <End Role="Consolidators" EntitySet="Consolidators" />
+      <End Role="ServiceConsolidators" EntitySet="ServiceConsolidators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventorys_PincardCosts" Association="PinCardModel.FK_Inventorys_PincardCosts">
+      <End Role="PincardCosts" EntitySet="PincardCosts" />
+      <End Role="Inventorys" EntitySet="Inventorys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventorys_Services" Association="PinCardModel.FK_Inventorys_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="Inventorys" EntitySet="Inventorys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MinInventorys_PincardCosts" Association="PinCardModel.FK_MinInventorys_PincardCosts">
+      <End Role="PincardCosts" EntitySet="PincardCosts" />
+      <End Role="MinInventorys" EntitySet="MinInventorys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MinInventorys_Services" Association="PinCardModel.FK_MinInventorys_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="MinInventorys" EntitySet="MinInventorys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PincardNominals_PincardCosts1" Association="PinCardModel.FK_PincardNominals_PincardCosts1">
+      <End Role="PincardCosts" EntitySet="PincardCosts" />
+      <End Role="PincardNominals" EntitySet="PincardNominals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UPGServicePincardCosts_PincardCosts" Association="PinCardModel.FK_UPGServicePincardCosts_PincardCosts">
+      <End Role="PincardCosts" EntitySet="PincardCosts" />
+      <End Role="UPGServicePincardCosts" EntitySet="UPGServicePincardCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PincardNominals_ServiceConsolidators" Association="PinCardModel.FK_PincardNominals_ServiceConsolidators">
+      <End Role="ServiceConsolidators" EntitySet="ServiceConsolidators" />
+      <End Role="PincardNominals" EntitySet="PincardNominals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PinCards_PincardNominals" Association="PinCardModel.FK_PinCards_PincardNominals">
+      <End Role="PincardNominals" EntitySet="PincardNominals" />
+      <End Role="PinCards" EntitySet="PinCards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TariffNominal_PincardNominals" Association="PinCardModel.FK_TariffNominal_PincardNominals">
+      <End Role="PincardNominals" EntitySet="PincardNominals" />
+      <End Role="TariffNominal" EntitySet="TariffNominals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThresholdNominal_PincardNominals" Association="PinCardModel.FK_ThresholdNominal_PincardNominals">
+      <End Role="PincardNominals" EntitySet="PincardNominals" />
+      <End Role="ThresholdNominal" EntitySet="ThresholdNominals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PinCards_PinCardTypes" Association="PinCardModel.FK_PinCards_PinCardTypes">
+      <End Role="PinCardTypes" EntitySet="PinCardTypes" />
+      <End Role="PinCards" EntitySet="PinCards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Services_Providers" Association="PinCardModel.FK_Services_Providers">
+      <End Role="Providers" EntitySet="Providers" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceConsolidators_Services" Association="PinCardModel.FK_ServiceConsolidators_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="ServiceConsolidators" EntitySet="ServiceConsolidators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UPGServicePincardCosts_Services" Association="PinCardModel.FK_UPGServicePincardCosts_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="UPGServicePincardCosts" EntitySet="UPGServicePincardCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UPGServiceServices_Services" Association="PinCardModel.FK_UPGServiceServices_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="UPGServiceServices" EntitySet="UPGServiceServices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TariffNominal_Tariff" Association="PinCardModel.FK_TariffNominal_Tariff">
+      <End Role="Tariff" EntitySet="Tariffs" />
+      <End Role="TariffNominal" EntitySet="TariffNominals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TariffNominal_Threshold" Association="PinCardModel.FK_TariffNominal_Threshold">
+      <End Role="Threshold" EntitySet="Thresholds" />
+      <End Role="TariffNominal" EntitySet="TariffNominals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThresholdNominal_Threshold" Association="PinCardModel.FK_ThresholdNominal_Threshold">
+      <End Role="Threshold" EntitySet="Thresholds" />
+      <End Role="ThresholdNominal" EntitySet="ThresholdNominals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UPGServiceServices_UPGService" Association="PinCardModel.FK_UPGServiceServices_UPGService">
+      <End Role="UPGService" EntitySet="UPGServices" />
+      <End Role="UPGServiceServices" EntitySet="UPGServiceServices" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AverageCommissionCost">
+    <Key>
+      <PropertyRef Name="AverageCommissionCostID" />
+    </Key>
+    <Property Name="AverageCommissionCostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AverageCommission" Type="Double" />
+    <Property Name="AverageCommissionCostDesc" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FK_PincardCostID" Type="Int32" />
+    <Property Name="FK_ServiceID" Type="Int32" />
+    <Property Name="UPGCardProductionID" Type="Int32" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" />
+    <Property Name="UpdateDate" Type="DateTime" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PincardCost" Relationship="PinCardModel.FK_AverageCommissionCosts_PincardCosts" FromRole="AverageCommissionCosts" ToRole="PincardCosts" />
+    <NavigationProperty Name="Service" Relationship="PinCardModel.FK_AverageCommissionCosts_ServiceConsolidators" FromRole="AverageCommissionCosts" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Configuration">
+    <Key>
+      <PropertyRef Name="ConfigID" />
+    </Key>
+    <Property Name="ConfigID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConfigName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ConfigValue" Type="Int32" />
+    <Property Name="ConfigType" Type="Int32" />
+    <Property Name="ConfigTime" Type="Time" />
+    <Property Name="ConfigDate" Type="DateTime" />
+    <Property Name="ConfigEmailTo" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ConfigEmailCC" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ConfigEmailBCC" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ConfigNote" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Nullable="false" />
+    <Property Name="InsertBy" Type="Int64" Nullable="false" />
+    <Property Name="UpdateDate" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int64" />
+    <Property Name="TYPE_AUTOID" Type="Int64" />
+    <Property Name="STT_AUTOID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="Consolidator">
+    <Key>
+      <PropertyRef Name="ConsolidatorID" />
+    </Key>
+    <Property Name="ConsolidatorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConsolidatorNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="CosolidatorName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="ConsolidatorAddress" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="ConsolidatorPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ConsolidatorCellPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ConsolidatorOrder" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="ServiceConsolidators" Relationship="PinCardModel.FK_ServiceConsolidators_ServiceConsolidators" FromRole="Consolidators" ToRole="ServiceConsolidators" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="InventoryID" />
+    </Key>
+    <Property Name="InventoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_ServiceID" Type="Int32" />
+    <Property Name="FK_PincardCostID" Type="Int32" />
+    <Property Name="InventoryQuantity" Type="Int32" />
+    <Property Name="InventoryAmount" Type="Double" />
+    <Property Name="InventoryDate" Type="DateTime" />
+    <NavigationProperty Name="PincardCost" Relationship="PinCardModel.FK_Inventorys_PincardCosts" FromRole="Inventorys" ToRole="PincardCosts" />
+    <NavigationProperty Name="Service" Relationship="PinCardModel.FK_Inventorys_Services" FromRole="Inventorys" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="MinInventory">
+    <Key>
+      <PropertyRef Name="MinInventoryID" />
+    </Key>
+    <Property Name="MinInventoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_ServiceID" Type="Int32" />
+    <Property Name="FK_PincardCostID" Type="Int32" />
+    <Property Name="UPGCardProductionID" Type="Int32" Nullable="false" />
+    <Property Name="MinInventoryQuantity" Type="Double" />
+    <NavigationProperty Name="PincardCost" Relationship="PinCardModel.FK_MinInventorys_PincardCosts" FromRole="MinInventorys" ToRole="PincardCosts" />
+    <NavigationProperty Name="Service" Relationship="PinCardModel.FK_MinInventorys_Services" FromRole="MinInventorys" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="PincardCost">
+    <Key>
+      <PropertyRef Name="PincardCostID" />
+    </Key>
+    <Property Name="PincardCostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PincardCostNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="PincardCostName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="PincardCostDesc" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Cost" Type="Double" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="AverageCommissionCosts" Relationship="PinCardModel.FK_AverageCommissionCosts_PincardCosts" FromRole="PincardCosts" ToRole="AverageCommissionCosts" />
+    <NavigationProperty Name="Inventorys" Relationship="PinCardModel.FK_Inventorys_PincardCosts" FromRole="PincardCosts" ToRole="Inventorys" />
+    <NavigationProperty Name="MinInventorys" Relationship="PinCardModel.FK_MinInventorys_PincardCosts" FromRole="PincardCosts" ToRole="MinInventorys" />
+    <NavigationProperty Name="PincardNominals" Relationship="PinCardModel.FK_PincardNominals_PincardCosts1" FromRole="PincardCosts" ToRole="PincardNominals" />
+    <NavigationProperty Name="UPGServicePincardCosts" Relationship="PinCardModel.FK_UPGServicePincardCosts_PincardCosts" FromRole="PincardCosts" ToRole="UPGServicePincardCosts" />
+  </EntityType>
+  <EntityType Name="PincardNominal">
+    <Key>
+      <PropertyRef Name="PincardNominalID" />
+    </Key>
+    <Property Name="PincardNominalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PincardNominalName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="FK_PincardCostID" Type="Int32" />
+    <Property Name="FK_ServiceConsolidatorID" Type="Int32" />
+    <Property Name="Commission" Type="Double" />
+    <Property Name="UPGCardProductionID" Type="Int32" />
+    <Property Name="LogichCostCode" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="PincardCost" Relationship="PinCardModel.FK_PincardNominals_PincardCosts1" FromRole="PincardNominals" ToRole="PincardCosts" />
+    <NavigationProperty Name="ServiceConsolidator" Relationship="PinCardModel.FK_PincardNominals_ServiceConsolidators" FromRole="PincardNominals" ToRole="ServiceConsolidators" />
+    <NavigationProperty Name="PinCards" Relationship="PinCardModel.FK_PinCards_PincardNominals" FromRole="PincardNominals" ToRole="PinCards" />
+    <NavigationProperty Name="TariffNominals" Relationship="PinCardModel.FK_TariffNominal_PincardNominals" FromRole="PincardNominals" ToRole="TariffNominal" />
+    <NavigationProperty Name="ThresholdNominals" Relationship="PinCardModel.FK_ThresholdNominal_PincardNominals" FromRole="PincardNominals" ToRole="ThresholdNominal" />
+  </EntityType>
+  <EntityType Name="PinCard">
+    <Key>
+      <PropertyRef Name="PinCardID" />
+    </Key>
+    <Property Name="PinCardID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PinCode" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ExpireDate" Type="DateTime" />
+    <Property Name="CreateDate" Type="DateTime" />
+    <Property Name="BlockDate" Type="DateTime" />
+    <Property Name="SellDate" Type="DateTime" />
+    <Property Name="CardInfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CardStatus" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="FK_PincardTypeID" Type="Int32" />
+    <Property Name="FK_PincardNominalID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsTransferToUpg" Type="Boolean" />
+    <Property Name="CurrentCommission" Type="Double" />
+    <NavigationProperty Name="PincardNominal" Relationship="PinCardModel.FK_PinCards_PincardNominals" FromRole="PinCards" ToRole="PincardNominals" />
+    <NavigationProperty Name="PinCardType" Relationship="PinCardModel.FK_PinCards_PinCardTypes" FromRole="PinCards" ToRole="PinCardTypes" />
+  </EntityType>
+  <EntityType Name="PinCardType">
+    <Key>
+      <PropertyRef Name="PinCardTypeId" />
+    </Key>
+    <Property Name="PinCardTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PinCardTypeNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="PinCardTypeName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Priority" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="PinCards" Relationship="PinCardModel.FK_PinCards_PinCardTypes" FromRole="PinCardTypes" ToRole="PinCards" />
+  </EntityType>
+  <EntityType Name="Provider">
+    <Key>
+      <PropertyRef Name="ProviderId" />
+    </Key>
+    <Property Name="ProviderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProviderNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="ProviderName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="ProviderImageUrl" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Services" Relationship="PinCardModel.FK_Services_Providers" FromRole="Providers" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="ServiceConsolidator">
+    <Key>
+      <PropertyRef Name="ServiceConsolidatorID" />
+    </Key>
+    <Property Name="ServiceConsolidatorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceConsolidatorName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="FK_ServiceID" Type="Int32" />
+    <Property Name="FK_ConsolidatorID" Type="Int32" />
+    <Property Name="ServiceConsolidatorOrder" Type="Int32" />
+    <NavigationProperty Name="Consolidator" Relationship="PinCardModel.FK_ServiceConsolidators_ServiceConsolidators" FromRole="ServiceConsolidators" ToRole="Consolidators" />
+    <NavigationProperty Name="PincardNominals" Relationship="PinCardModel.FK_PincardNominals_ServiceConsolidators" FromRole="ServiceConsolidators" ToRole="PincardNominals" />
+    <NavigationProperty Name="Service" Relationship="PinCardModel.FK_ServiceConsolidators_Services" FromRole="ServiceConsolidators" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="ServiceName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="FK_ProviderID" Type="Int32" Nullable="false" />
+    <Property Name="ServiceDesc" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ServiceOrder" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="AverageCommissionCosts" Relationship="PinCardModel.FK_AverageCommissionCosts_ServiceConsolidators" FromRole="Services" ToRole="AverageCommissionCosts" />
+    <NavigationProperty Name="Inventorys" Relationship="PinCardModel.FK_Inventorys_Services" FromRole="Services" ToRole="Inventorys" />
+    <NavigationProperty Name="MinInventorys" Relationship="PinCardModel.FK_MinInventorys_Services" FromRole="Services" ToRole="MinInventorys" />
+    <NavigationProperty Name="Provider" Relationship="PinCardModel.FK_Services_Providers" FromRole="Services" ToRole="Providers" />
+    <NavigationProperty Name="ServiceConsolidators" Relationship="PinCardModel.FK_ServiceConsolidators_Services" FromRole="Services" ToRole="ServiceConsolidators" />
+    <NavigationProperty Name="UPGServicePincardCosts" Relationship="PinCardModel.FK_UPGServicePincardCosts_Services" FromRole="Services" ToRole="UPGServicePincardCosts" />
+    <NavigationProperty Name="UPGServiceServices" Relationship="PinCardModel.FK_UPGServiceServices_Services" FromRole="Services" ToRole="UPGServiceServices" />
+  </EntityType>
+  <EntityType Name="Tariff">
+    <Key>
+      <PropertyRef Name="TariffID" />
+    </Key>
+    <Property Name="TariffID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TariffName" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="Note" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Nullable="false" />
+    <Property Name="InsertBy" Type="Int64" Nullable="false" />
+    <Property Name="UpdateDate" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int64" />
+    <Property Name="TYPE_AUTOID" Type="Int64" />
+    <Property Name="STT_AUTOID" Type="Int64" />
+    <NavigationProperty Name="TariffNominals" Relationship="PinCardModel.FK_TariffNominal_Tariff" FromRole="Tariff" ToRole="TariffNominal" />
+  </EntityType>
+  <EntityType Name="TariffNominal">
+    <Key>
+      <PropertyRef Name="TariffNominalID" />
+    </Key>
+    <Property Name="TariffNominalID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TariffID" Type="Int64" Nullable="false" />
+    <Property Name="NominalID" Type="Int32" Nullable="false" />
+    <Property Name="ThresholdID" Type="Int64" Nullable="false" />
+    <Property Name="FromDate" Type="DateTime" Nullable="false" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="Note" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Nullable="false" />
+    <Property Name="InsertBy" Type="Int64" Nullable="false" />
+    <Property Name="UpdateDate" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int64" />
+    <Property Name="TYPE_AUTOID" Type="Int64" />
+    <Property Name="STT_AUTOID" Type="Int64" />
+    <NavigationProperty Name="PincardNominal" Relationship="PinCardModel.FK_TariffNominal_PincardNominals" FromRole="TariffNominal" ToRole="PincardNominals" />
+    <NavigationProperty Name="Tariff" Relationship="PinCardModel.FK_TariffNominal_Tariff" FromRole="TariffNominal" ToRole="Tariff" />
+    <NavigationProperty Name="Threshold" Relationship="PinCardModel.FK_TariffNominal_Threshold" FromRole="TariffNominal" ToRole="Threshold" />
+  </EntityType>
+  <EntityType Name="Threshold">
+    <Key>
+      <PropertyRef Name="ThresholdID" />
+    </Key>
+    <Property Name="ThresholdID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ThresholdName" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ThresholdValue" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Nullable="false" />
+    <Property Name="InsertBy" Type="Int64" Nullable="false" />
+    <Property Name="UpdateDate" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int64" />
+    <Property Name="TYPE_AUTOID" Type="Int64" />
+    <Property Name="STT_AUTOID" Type="Int64" />
+    <NavigationProperty Name="TariffNominals" Relationship="PinCardModel.FK_TariffNominal_Threshold" FromRole="Threshold" ToRole="TariffNominal" />
+    <NavigationProperty Name="ThresholdNominals" Relationship="PinCardModel.FK_ThresholdNominal_Threshold" FromRole="Threshold" ToRole="ThresholdNominal" />
+  </EntityType>
+  <EntityType Name="ThresholdNominal">
+    <Key>
+      <PropertyRef Name="ThresholdNominalID" />
+    </Key>
+    <Property Name="ThresholdNominalID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NominalID" Type="Int32" Nullable="false" />
+    <Property Name="ThresholdID" Type="Int64" Nullable="false" />
+    <Property Name="FromDate" Type="DateTime" Nullable="false" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="Note" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Nullable="false" />
+    <Property Name="InsertBy" Type="Int64" Nullable="false" />
+    <Property Name="UpdateDate" Type="DateTime" />
+    <Property Name="UpdateBy" Type="Int64" />
+    <Property Name="TYPE_AUTOID" Type="Int64" />
+    <Property Name="STT_AUTOID" Type="Int64" />
+    <NavigationProperty Name="PincardNominal" Relationship="PinCardModel.FK_ThresholdNominal_PincardNominals" FromRole="ThresholdNominal" ToRole="PincardNominals" />
+    <NavigationProperty Name="Threshold" Relationship="PinCardModel.FK_ThresholdNominal_Threshold" FromRole="ThresholdNominal" ToRole="Threshold" />
+  </EntityType>
+  <EntityType Name="Transhist">
+    <Key>
+      <PropertyRef Name="TranshistID" />
+    </Key>
+    <Property Name="TranshistID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TranshistResponseXML" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TraceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TraceSign" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="TraceSession" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="TraceReqtype" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Code" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Serial" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Expdate" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="ProductType" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Amount" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="TransType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TransTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UPGService">
+    <Key>
+      <PropertyRef Name="UPGServiceID" />
+    </Key>
+    <Property Name="UPGServiceID" Type="Int32" Nullable="false" />
+    <Property Name="UPGServiceName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="UPGGateServiceID" Type="Int32" />
+    <Property Name="OSMPCode" Type="Int32" />
+    <Property Name="CreateDate" Type="DateTime" />
+    <Property Name="ServiceGroupID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="UPGServiceServices" Relationship="PinCardModel.FK_UPGServiceServices_UPGService" FromRole="UPGService" ToRole="UPGServiceServices" />
+  </EntityType>
+  <EntityType Name="UPGServicePincardCost">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UPGCardProductionID" Type="Int32" />
+    <Property Name="FK_ServiceID" Type="Int32" />
+    <Property Name="FK_PincardCostID" Type="Int32" />
+    <NavigationProperty Name="PincardCost" Relationship="PinCardModel.FK_UPGServicePincardCosts_PincardCosts" FromRole="UPGServicePincardCosts" ToRole="PincardCosts" />
+    <NavigationProperty Name="Service" Relationship="PinCardModel.FK_UPGServicePincardCosts_Services" FromRole="UPGServicePincardCosts" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="UPGServiceService">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+      <PropertyRef Name="UPGServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="UPGServiceID" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Service" Relationship="PinCardModel.FK_UPGServiceServices_Services" FromRole="UPGServiceServices" ToRole="Services" />
+    <NavigationProperty Name="UPGService" Relationship="PinCardModel.FK_UPGServiceServices_UPGService" FromRole="UPGServiceServices" ToRole="UPGService" />
+  </EntityType>
+  <EntityType Name="View_ReportInventorys">
+    <Key>
+      <PropertyRef Name="InventoryID" />
+      <PropertyRef Name="ServiceNo" />
+    </Key>
+    <Property Name="InventoryID" Type="Int32" Nullable="false" />
+    <Property Name="FK_ServiceID" Type="Int32" />
+    <Property Name="FK_PincardCostID" Type="Int32" />
+    <Property Name="InventoryQuantity" Type="Int32" />
+    <Property Name="InventoryAmount" Type="Double" />
+    <Property Name="InventoryDate" Type="DateTime" />
+    <Property Name="ServiceName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="PincardCostName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="ServiceNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Cost" Type="Double" />
+  </EntityType>
+  <EntityType Name="View_ReportPincard">
+    <Key>
+      <PropertyRef Name="PinCardID" />
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="CosolidatorName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="PinCardTypeName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="PinCardID" Type="Int32" Nullable="false" />
+    <Property Name="PinCode" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ExpireDate" Type="DateTime" />
+    <Property Name="CreateDate" Type="DateTime" />
+    <Property Name="BlockDate" Type="DateTime" />
+    <Property Name="SellDate" Type="DateTime" />
+    <Property Name="CardInfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CardStatus" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="FK_PincardTypeID" Type="Int32" />
+    <Property Name="FK_PincardNominalID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsTransferToUpg" Type="Boolean" />
+    <Property Name="PincardCostName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="CurrentCommission" Type="Double" />
+    <Property Name="Cost" Type="Double" />
+    <Property Name="LogichCostCode" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="CostPrice" Type="Double" />
+    <Property Name="UPGCardProductionID" Type="Int32" />
+    <Property Name="PincardNominalName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_SearchPinCards">
+    <Key>
+      <PropertyRef Name="PinCardID" />
+    </Key>
+    <Property Name="PinCardID" Type="Int32" Nullable="false" />
+    <Property Name="PinCode" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ExpireDate" Type="DateTime" />
+    <Property Name="CreateDate" Type="DateTime" />
+    <Property Name="BlockDate" Type="DateTime" />
+    <Property Name="SellDate" Type="DateTime" />
+    <Property Name="CardInfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CardStatus" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="FK_PincardTypeID" Type="Int32" />
+    <Property Name="FK_PincardNominalID" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsTransferToUpg" Type="Boolean" />
+    <Property Name="PinCardTypeName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="PincardCostName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="Cost" Type="Double" />
+    <Property Name="ServiceName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="CosolidatorName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="FK_PincardCostID" Type="Int32" />
+    <Property Name="FK_ServiceConsolidatorID" Type="Int32" />
+    <Property Name="FK_ServiceID" Type="Int32" />
+    <Property Name="FK_ConsolidatorID" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_AverageCommissionCosts_PincardCosts">
+    <End Role="PincardCosts" Type="PinCardModel.PincardCost" Multiplicity="0..1" />
+    <End Role="AverageCommissionCosts" Type="PinCardModel.AverageCommissionCost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PincardCosts">
+        <PropertyRef Name="PincardCostID" />
+      </Principal>
+      <Dependent Role="AverageCommissionCosts">
+        <PropertyRef Name="FK_PincardCostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AverageCommissionCosts_ServiceConsolidators">
+    <End Role="Services" Type="PinCardModel.Service" Multiplicity="0..1" />
+    <End Role="AverageCommissionCosts" Type="PinCardModel.AverageCommissionCost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="AverageCommissionCosts">
+        <PropertyRef Name="FK_ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceConsolidators_ServiceConsolidators">
+    <End Role="Consolidators" Type="PinCardModel.Consolidator" Multiplicity="0..1" />
+    <End Role="ServiceConsolidators" Type="PinCardModel.ServiceConsolidator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Consolidators">
+        <PropertyRef Name="ConsolidatorID" />
+      </Principal>
+      <Dependent Role="ServiceConsolidators">
+        <PropertyRef Name="FK_ConsolidatorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventorys_PincardCosts">
+    <End Role="PincardCosts" Type="PinCardModel.PincardCost" Multiplicity="0..1" />
+    <End Role="Inventorys" Type="PinCardModel.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PincardCosts">
+        <PropertyRef Name="PincardCostID" />
+      </Principal>
+      <Dependent Role="Inventorys">
+        <PropertyRef Name="FK_PincardCostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventorys_Services">
+    <End Role="Services" Type="PinCardModel.Service" Multiplicity="0..1" />
+    <End Role="Inventorys" Type="PinCardModel.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="Inventorys">
+        <PropertyRef Name="FK_ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MinInventorys_PincardCosts">
+    <End Role="PincardCosts" Type="PinCardModel.PincardCost" Multiplicity="0..1" />
+    <End Role="MinInventorys" Type="PinCardModel.MinInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PincardCosts">
+        <PropertyRef Name="PincardCostID" />
+      </Principal>
+      <Dependent Role="MinInventorys">
+        <PropertyRef Name="FK_PincardCostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MinInventorys_Services">
+    <End Role="Services" Type="PinCardModel.Service" Multiplicity="0..1" />
+    <End Role="MinInventorys" Type="PinCardModel.MinInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="MinInventorys">
+        <PropertyRef Name="FK_ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PincardNominals_PincardCosts1">
+    <End Role="PincardCosts" Type="PinCardModel.PincardCost" Multiplicity="0..1" />
+    <End Role="PincardNominals" Type="PinCardModel.PincardNominal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PincardCosts">
+        <PropertyRef Name="PincardCostID" />
+      </Principal>
+      <Dependent Role="PincardNominals">
+        <PropertyRef Name="FK_PincardCostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UPGServicePincardCosts_PincardCosts">
+    <End Role="PincardCosts" Type="PinCardModel.PincardCost" Multiplicity="0..1" />
+    <End Role="UPGServicePincardCosts" Type="PinCardModel.UPGServicePincardCost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PincardCosts">
+        <PropertyRef Name="PincardCostID" />
+      </Principal>
+      <Dependent Role="UPGServicePincardCosts">
+        <PropertyRef Name="FK_PincardCostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PincardNominals_ServiceConsolidators">
+    <End Role="ServiceConsolidators" Type="PinCardModel.ServiceConsolidator" Multiplicity="0..1" />
+    <End Role="PincardNominals" Type="PinCardModel.PincardNominal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceConsolidators">
+        <PropertyRef Name="ServiceConsolidatorID" />
+      </Principal>
+      <Dependent Role="PincardNominals">
+        <PropertyRef Name="FK_ServiceConsolidatorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PinCards_PincardNominals">
+    <End Role="PincardNominals" Type="PinCardModel.PincardNominal" Multiplicity="0..1" />
+    <End Role="PinCards" Type="PinCardModel.PinCard" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PincardNominals">
+        <PropertyRef Name="PincardNominalID" />
+      </Principal>
+      <Dependent Role="PinCards">
+        <PropertyRef Name="FK_PincardNominalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TariffNominal_PincardNominals">
+    <End Role="PincardNominals" Type="PinCardModel.PincardNominal" Multiplicity="1" />
+    <End Role="TariffNominal" Type="PinCardModel.TariffNominal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PincardNominals">
+        <PropertyRef Name="PincardNominalID" />
+      </Principal>
+      <Dependent Role="TariffNominal">
+        <PropertyRef Name="NominalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThresholdNominal_PincardNominals">
+    <End Role="PincardNominals" Type="PinCardModel.PincardNominal" Multiplicity="1" />
+    <End Role="ThresholdNominal" Type="PinCardModel.ThresholdNominal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PincardNominals">
+        <PropertyRef Name="PincardNominalID" />
+      </Principal>
+      <Dependent Role="ThresholdNominal">
+        <PropertyRef Name="NominalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PinCards_PinCardTypes">
+    <End Role="PinCardTypes" Type="PinCardModel.PinCardType" Multiplicity="0..1" />
+    <End Role="PinCards" Type="PinCardModel.PinCard" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PinCardTypes">
+        <PropertyRef Name="PinCardTypeId" />
+      </Principal>
+      <Dependent Role="PinCards">
+        <PropertyRef Name="FK_PincardTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Services_Providers">
+    <End Role="Providers" Type="PinCardModel.Provider" Multiplicity="1" />
+    <End Role="Services" Type="PinCardModel.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Providers">
+        <PropertyRef Name="ProviderId" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="FK_ProviderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceConsolidators_Services">
+    <End Role="Services" Type="PinCardModel.Service" Multiplicity="0..1" />
+    <End Role="ServiceConsolidators" Type="PinCardModel.ServiceConsolidator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="ServiceConsolidators">
+        <PropertyRef Name="FK_ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UPGServicePincardCosts_Services">
+    <End Role="Services" Type="PinCardModel.Service" Multiplicity="0..1" />
+    <End Role="UPGServicePincardCosts" Type="PinCardModel.UPGServicePincardCost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="UPGServicePincardCosts">
+        <PropertyRef Name="FK_ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UPGServiceServices_Services">
+    <End Role="Services" Type="PinCardModel.Service" Multiplicity="1" />
+    <End Role="UPGServiceServices" Type="PinCardModel.UPGServiceService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="UPGServiceServices">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TariffNominal_Tariff">
+    <End Role="Tariff" Type="PinCardModel.Tariff" Multiplicity="1" />
+    <End Role="TariffNominal" Type="PinCardModel.TariffNominal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tariff">
+        <PropertyRef Name="TariffID" />
+      </Principal>
+      <Dependent Role="TariffNominal">
+        <PropertyRef Name="TariffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TariffNominal_Threshold">
+    <End Role="Threshold" Type="PinCardModel.Threshold" Multiplicity="1" />
+    <End Role="TariffNominal" Type="PinCardModel.TariffNominal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Threshold">
+        <PropertyRef Name="ThresholdID" />
+      </Principal>
+      <Dependent Role="TariffNominal">
+        <PropertyRef Name="ThresholdID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThresholdNominal_Threshold">
+    <End Role="Threshold" Type="PinCardModel.Threshold" Multiplicity="1" />
+    <End Role="ThresholdNominal" Type="PinCardModel.ThresholdNominal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Threshold">
+        <PropertyRef Name="ThresholdID" />
+      </Principal>
+      <Dependent Role="ThresholdNominal">
+        <PropertyRef Name="ThresholdID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UPGServiceServices_UPGService">
+    <End Role="UPGService" Type="PinCardModel.UPGService" Multiplicity="1" />
+    <End Role="UPGServiceServices" Type="PinCardModel.UPGServiceService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UPGService">
+        <PropertyRef Name="UPGServiceID" />
+      </Principal>
+      <Dependent Role="UPGServiceServices">
+        <PropertyRef Name="UPGServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
