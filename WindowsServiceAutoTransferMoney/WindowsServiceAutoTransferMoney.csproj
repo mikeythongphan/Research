@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A57FA126-AE01-4745-9D54-39C2770487EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsServiceAutoTransferMoney</RootNamespace>
+    <AssemblyName>WindowsServiceAutoTransferMoney</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PKICore">
+      <HintPath>bin\PKICore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XmlLibrary">
+      <HintPath>bin\XmlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="XmlProtocolLibrary">
+      <HintPath>bin\XmlProtocolLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Systems\Logger.cs" />
+    <Compile Include="Systems\Tools.cs" />
+    <Compile Include="WindowsServiceAutoTransferMoney.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowsServiceAutoTransferMoney.Designer.cs">
+      <DependentUpon>WindowsServiceAutoTransferMoney.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SimpayFramework\SimLibrary\Base\Base.csproj">
+      <Project>{0E1CF9CC-5164-40CF-B5D5-8C808E938F1A}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SimpayFramework\SimLibrary\EntityLibrary\EntityLibrary.csproj">
+      <Project>{8D1A4BE9-AD89-496C-ADC7-085697C6BF0D}</Project>
+      <Name>EntityLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SimpayFramework\SimLibrary\Helpers\Helpers.csproj">
+      <Project>{421E33EA-2062-4970-B05E-89B9F1AAB3B2}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SimpayFramework\SimLibrary\Librarys\Librarys.csproj">
+      <Project>{4254C47B-9D86-42A8-BD71-4672FA0E6283}</Project>
+      <Name>Librarys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SimpayFramework\SimLibrary\Utilities\Utilities.csproj">
+      <Project>{9259ED8A-3366-41D2-A8FC-F7DF93321CB1}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\WindowsServiceAutoTransferMoney.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Base.dll" />
+    <Content Include="bin\Debug\Base.pdb" />
+    <Content Include="bin\Debug\ClosedXML.dll" />
+    <Content Include="bin\Debug\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\Debug\EntityLibrary.dll" />
+    <Content Include="bin\Debug\EntityLibrary.pdb" />
+    <Content Include="bin\Debug\EPPlus.dll" />
+    <Content Include="bin\Debug\ExtremeML.dll" />
+    <Content Include="bin\Debug\Helpers.dll" />
+    <Content Include="bin\Debug\Helpers.pdb" />
+    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Debug\itextsharp.dll" />
+    <Content Include="bin\Debug\Librarys.dll" />
+    <Content Include="bin\Debug\Librarys.pdb" />
+    <Content Include="bin\Debug\PKICore.dll" />
+    <Content Include="bin\Debug\PKICore.pdb" />
+    <Content Include="bin\Debug\PPF.ExcelLib.dll" />
+    <Content Include="bin\Debug\RKLib.ExportData.dll" />
+    <Content Include="bin\Debug\Security.dll" />
+    <Content Include="bin\Debug\Security.pdb" />
+    <Content Include="bin\Debug\TNOLIB.dll" />
+    <Content Include="bin\Debug\UPGServiceLibrary.dll" />
+    <Content Include="bin\Debug\UPGServiceLibrary.pdb" />
+    <Content Include="bin\Debug\Utilities.dll" />
+    <Content Include="bin\Debug\Utilities.pdb" />
+    <Content Include="bin\Debug\WindowsServiceAutoTransferMoney.exe" />
+    <Content Include="bin\Debug\WindowsServiceAutoTransferMoney.pdb" />
+    <Content Include="bin\Debug\XmlLibrary.dll" />
+    <Content Include="bin\Debug\XmlLibrary.pdb" />
+    <Content Include="bin\Debug\XmlProtocolLibrary.dll" />
+    <Content Include="bin\Debug\XmlProtocolLibrary.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
