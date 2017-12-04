@@ -1,0 +1,55 @@
+D:\DLL\DataProvider\bin\Debug\DataProvider.dll
+D:\DLL\DataProvider\bin\Debug\DataProvider.pdb
+D:\DLL\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+D:\DLL\DataProvider\obj\Debug\DataProvider.dll
+D:\DLL\DataProvider\obj\Debug\DataProvider.pdb
+C:\Documents and Settings\tungnk\Desktop\Nam\New Folder\VBN\DataProvider\bin\Debug\DataProvider.dll
+C:\Documents and Settings\tungnk\Desktop\Nam\New Folder\VBN\DataProvider\bin\Debug\DataProvider.pdb
+C:\Documents and Settings\tungnk\Desktop\Nam\New Folder\VBN\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\tungnk\Desktop\Nam\New Folder\VBN\DataProvider\obj\Debug\DataProvider.dll
+C:\Documents and Settings\tungnk\Desktop\Nam\New Folder\VBN\DataProvider\obj\Debug\DataProvider.pdb
+C:\Documents and Settings\tungnk\Desktop\VBN\DataProvider\bin\Debug\DataProvider.dll
+C:\Documents and Settings\tungnk\Desktop\VBN\DataProvider\bin\Debug\DataProvider.pdb
+C:\Documents and Settings\tungnk\Desktop\VBN\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\tungnk\Desktop\VBN\DataProvider\obj\Debug\DataProvider.dll
+C:\Documents and Settings\tungnk\Desktop\VBN\DataProvider\obj\Debug\DataProvider.pdb
+D:\Nam\VBn - Chinh\DataProvider\bin\Debug\DataProvider.dll
+D:\Nam\VBn - Chinh\DataProvider\bin\Debug\DataProvider.pdb
+D:\Nam\VBn - Chinh\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+D:\Nam\VBn - Chinh\DataProvider\obj\Debug\DataProvider.dll
+D:\Nam\VBn - Chinh\DataProvider\obj\Debug\DataProvider.pdb
+D:\Nam\VBN - 13082008\DataProvider\bin\Debug\DataProvider.dll
+D:\Nam\VBN - 13082008\DataProvider\bin\Debug\DataProvider.pdb
+D:\Nam\VBN - 13082008\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+D:\Nam\VBN - 13082008\DataProvider\obj\Debug\DataProvider.dll
+D:\Nam\VBN - 13082008\DataProvider\obj\Debug\DataProvider.pdb
+E:\Bien\VBN\DataProvider\bin\Debug\DataProvider.dll
+E:\Bien\VBN\DataProvider\bin\Debug\DataProvider.pdb
+E:\Bien\VBN\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\Bien\VBN\DataProvider\obj\Debug\DataProvider.dll
+E:\Bien\VBN\DataProvider\obj\Debug\DataProvider.pdb
+E:\Project\VietNamBakeryNetwork\Hoan chinh\VBN new2\VBN new2\DataProvider\bin\Debug\DataProvider.dll
+E:\Project\VietNamBakeryNetwork\Hoan chinh\VBN new2\VBN new2\DataProvider\bin\Debug\DataProvider.pdb
+E:\Project\VietNamBakeryNetwork\Hoan chinh\VBN new2\VBN new2\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\VietNamBakeryNetwork\Hoan chinh\VBN new2\VBN new2\DataProvider\obj\Debug\DataProvider.dll
+E:\Project\VietNamBakeryNetwork\Hoan chinh\VBN new2\VBN new2\DataProvider\obj\Debug\DataProvider.pdb
+E:\Project\VietNamBakeryNetwork\Code gop 25-09-2008\Code Hoan Chinh\DataProvider\bin\Debug\DataProvider.dll
+E:\Project\VietNamBakeryNetwork\Code gop 25-09-2008\Code Hoan Chinh\DataProvider\bin\Debug\DataProvider.pdb
+E:\Project\VietNamBakeryNetwork\Code gop 25-09-2008\Code Hoan Chinh\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\VietNamBakeryNetwork\Code gop 25-09-2008\Code Hoan Chinh\DataProvider\obj\Debug\DataProvider.dll
+E:\Project\VietNamBakeryNetwork\Code gop 25-09-2008\Code Hoan Chinh\DataProvider\obj\Debug\DataProvider.pdb
+E:\Nam\VBN Project\Code Hoan Chinh\DataProvider\bin\Debug\DataProvider.dll
+E:\Nam\VBN Project\Code Hoan Chinh\DataProvider\bin\Debug\DataProvider.pdb
+E:\Nam\VBN Project\Code Hoan Chinh\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\Nam\VBN Project\Code Hoan Chinh\DataProvider\obj\Debug\DataProvider.dll
+E:\Nam\VBN Project\Code Hoan Chinh\DataProvider\obj\Debug\DataProvider.pdb
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Code Hoan Chinh\DataProvider\bin\Debug\DataProvider.dll
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Code Hoan Chinh\DataProvider\bin\Debug\DataProvider.pdb
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Code Hoan Chinh\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Code Hoan Chinh\DataProvider\obj\Debug\DataProvider.dll
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Code Hoan Chinh\DataProvider\obj\Debug\DataProvider.pdb
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Copy of Code Hoan Chinh\DataProvider\bin\Debug\DataProvider.dll
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Copy of Code Hoan Chinh\DataProvider\bin\Debug\DataProvider.pdb
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Copy of Code Hoan Chinh\DataProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Copy of Code Hoan Chinh\DataProvider\obj\Debug\DataProvider.dll
+E:\Project\VietNamBakeryNetwork\Code Hoan Chinh 25-09-2008\Copy of Code Hoan Chinh\DataProvider\obj\Debug\DataProvider.pdb
