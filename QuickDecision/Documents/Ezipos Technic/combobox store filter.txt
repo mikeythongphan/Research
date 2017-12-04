@@ -1,0 +1,9 @@
+<ext:ComboBox ID="cboITET_AUTOID" LazyInit="false" Disabled="true" StoreID="stoClass" runat="server"
+                                                                        DisplayField="ITET_NAME" Editable="false" FieldLabel="Phân lo?i" DataIndex="ITET_AUTOID" ValueField="ITET_AUTOID">
+                                                                        <CustomConfig>
+                                                                            <ext:ConfigItem Name="lastQuery" Value="''" />
+                                                                        </CustomConfig>
+                                                                    </ext:ComboBox>
+
+
+tao combobox voi customconfig nhu tren, khi store filter combobox se load lai ngay tu lan dau
