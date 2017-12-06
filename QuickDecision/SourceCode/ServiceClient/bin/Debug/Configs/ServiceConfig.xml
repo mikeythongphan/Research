@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--Ma chi nhanh -->
+  <add key="BranchID" value="3" />
+  <!--IP của server-->
+  <add key="S_SERVERIP" value="192.168.183.5" />  
+  <!--thời gian kết nối với server or gửi thông báo tời client-->
+  <add key="TIMECONECT" value="6000" />  
+  <!--port nhận dữ liệu của server-->
+  <add key="SERVERPORT" value="6000" />     
+  <!--giờ bắt đầu chuyền Gio:Phut-->
+  <add key="TimeBeginTransfer" value="17:20;05:22;05:25;05:30" /> 
+  <add key="TOPRECORD" value="300" />
+<!--link wcf service-->
+<add key="ServiceUrl" value="http://vnyi-chinhnn:81/TranferData/TransferService.svc" />
+</Settings>
