@@ -1,0 +1,14 @@
+D:\QuickDecision\Source Code\vnyi.Library\bin\Debug\vnyi.Library.dll
+D:\QuickDecision\Source Code\vnyi.Library\bin\Debug\vnyi.Library.pdb
+D:\QuickDecision\Source Code\vnyi.Library\bin\Debug\vnyi.DataProvider.dll
+D:\QuickDecision\Source Code\vnyi.Library\bin\Debug\vnyi.DataProvider.pdb
+D:\QuickDecision\Source Code\vnyi.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\QuickDecision\Source Code\vnyi.Library\obj\Debug\vnyi.Library.dll
+D:\QuickDecision\Source Code\vnyi.Library\obj\Debug\vnyi.Library.pdb
+D:\Program Files\QuickDecision\Source Code\vnyi.Library\bin\Debug\vnyi.Library.dll
+D:\Program Files\QuickDecision\Source Code\vnyi.Library\bin\Debug\vnyi.Library.pdb
+D:\Program Files\QuickDecision\Source Code\vnyi.Library\bin\Debug\vnyi.DataProvider.dll
+D:\Program Files\QuickDecision\Source Code\vnyi.Library\bin\Debug\vnyi.DataProvider.pdb
+D:\Program Files\QuickDecision\Source Code\vnyi.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\Program Files\QuickDecision\Source Code\vnyi.Library\obj\Debug\vnyi.Library.dll
+D:\Program Files\QuickDecision\Source Code\vnyi.Library\obj\Debug\vnyi.Library.pdb

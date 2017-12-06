@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0C7E1FF-B179-4B8E-A04E-902512D202E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>vnyi.Library</RootNamespace>
+    <AssemblyName>vnyi.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AM\AMASSETGROUP.cs" />
+    <Compile Include="AM\AMASSETGROUPDAO.cs" />
+    <Compile Include="AM\AMASSETITEM.cs" />
+    <Compile Include="AM\AMASSETITEMDAO.cs" />
+    <Compile Include="AM\AMCAPITAL.cs" />
+    <Compile Include="AM\AMCAPITALDAO.cs" />
+    <Compile Include="AM\AMCAPITALTYPE.cs" />
+    <Compile Include="AM\AMCAPITALTYPEDAO.cs" />
+    <Compile Include="AM\AMCONFIG.cs" />
+    <Compile Include="AM\AMCONFIGDAO.cs" />
+    <Compile Include="AM\AMDECREASE.cs" />
+    <Compile Include="AM\AMDECREASEDAO.cs" />
+    <Compile Include="AM\AMDECREASEDETAIL.cs" />
+    <Compile Include="AM\AMDECREASEDETAILDAO.cs" />
+    <Compile Include="AM\AMDEPMETHOD.cs" />
+    <Compile Include="AM\AMDEPMETHODDAO.cs" />
+    <Compile Include="AM\AMENTRY.cs" />
+    <Compile Include="AM\AMENTRYDAO.cs" />
+    <Compile Include="AM\AMEVALUATION.cs" />
+    <Compile Include="AM\AMEVALUATIONDAO.cs" />
+    <Compile Include="AM\AMEVALUATIONDETAIL.cs" />
+    <Compile Include="AM\AMEVALUATIONDETAILDAO.cs" />
+    <Compile Include="AM\AMINCREASE.cs" />
+    <Compile Include="AM\AMINCREASEDAO.cs" />
+    <Compile Include="AM\AMINCREASEDETAIL.cs" />
+    <Compile Include="AM\AMINCREASEDETAILDAO.cs" />
+    <Compile Include="AM\AMITEMUSEPURPOSE.cs" />
+    <Compile Include="AM\AMITEMUSEPURPOSEDAO.cs" />
+    <Compile Include="AM\AMPEPREBUS.cs" />
+    <Compile Include="AM\AMPEPREBUSCONFIG.cs" />
+    <Compile Include="AM\AMPEPREBUSCONFIGDAO.cs" />
+    <Compile Include="AM\AMPEPREBUSDAO.cs" />
+    <Compile Include="AM\AMPEPREBUSDETAIL.cs" />
+    <Compile Include="AM\AMPEPREBUSDETAILDAO.cs" />
+    <Compile Include="AM\AMPEPRECIATION.cs" />
+    <Compile Include="AM\AMPEPRECIATIONDAO.cs" />
+    <Compile Include="AM\AMREASON.cs" />
+    <Compile Include="AM\AMREASONDAO.cs" />
+    <Compile Include="AM\AMUSEINFOR.cs" />
+    <Compile Include="AM\AMUSEINFORDAO.cs" />
+    <Compile Include="AM\INSURANCEITEM.cs" />
+    <Compile Include="AM\INSURANCEITEMDAO.cs" />
+    <Compile Include="AP\APBUSINESS.cs" />
+    <Compile Include="AP\APBUSINESSDAO.cs" />
+    <Compile Include="AP\APCONFIG.cs" />
+    <Compile Include="AP\APCONFIGDAO.cs" />
+    <Compile Include="AP\APDEBTANALYSIS.cs" />
+    <Compile Include="AP\APDEBTANALYSISDAO.cs" />
+    <Compile Include="AP\APDEBTANALYSISDETAIL.cs" />
+    <Compile Include="AP\APDEBTANALYSISDETAILDAO.cs" />
+    <Compile Include="AR\ARBUSINESS.cs" />
+    <Compile Include="AR\ARBUSINESSDAO.cs" />
+    <Compile Include="AR\ARCONFIG.cs" />
+    <Compile Include="AR\ARCONFIGDAO.cs" />
+    <Compile Include="CM\CMCONFIG.cs" />
+    <Compile Include="CM\CMCONFIGDAO.cs" />
+    <Compile Include="CM\CMPAYMENT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CM\CMPAYMENTDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CM\CMRECEIPT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CM\CMRECEIPTDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CM\ORDERFORPAYMENT.cs" />
+    <Compile Include="CM\ORDERFORPAYMENTDAO.cs" />
+    <Compile Include="COMON\IV_ET\PUBENTRYTYPE.cs" />
+    <Compile Include="COMON\IV_ET\PUBENTRYTYPEDAO.cs" />
+    <Compile Include="COMON\REPORT\REPORTDAO.cs" />
+    <Compile Include="CP\COSTPRICE.cs" />
+    <Compile Include="CP\COSTPRICEDAO.cs" />
+    <Compile Include="CP\CPMETHOD.cs" />
+    <Compile Include="CP\CPMETHODDAO.cs" />
+    <Compile Include="CP\CPTYPE.cs" />
+    <Compile Include="CP\CPTYPEDAO.cs" />
+    <Compile Include="DataObject.cs" />
+    <Compile Include="DOC\DOCDIMENTIONS.cs" />
+    <Compile Include="DOC\DOCDIMENTIONSDAO.cs" />
+    <Compile Include="DOC\DOCREDIMENTIONS.cs" />
+    <Compile Include="DOC\DOCREDIMENTIONSDAO.cs" />
+    <Compile Include="DOC\DOCUMENTCONFIGID.cs" />
+    <Compile Include="DOC\DOCUMENTCONFIGIDDAO.cs" />
+    <Compile Include="DOC\DOCUMENTRELATION.cs" />
+    <Compile Include="DOC\DOCUMENTRELATIONDAO.cs" />
+    <Compile Include="DOC\PUBDOCUMENT.cs" />
+    <Compile Include="DOC\PUBDOCUMENTAVG.cs" />
+    <Compile Include="DOC\PUBDOCUMENTAVGDAO.cs" />
+    <Compile Include="DOC\PUBDOCUMENTDAO.cs" />
+    <Compile Include="DOC\PUBDOCUMENTLOCK.cs" />
+    <Compile Include="DOC\PUBDOCUMENTLOCKDAO.cs" />
+    <Compile Include="DOC\PUBDOCUMENTTYPE.cs" />
+    <Compile Include="DOC\PUBDOCUMENTTYPEDAO.cs" />
+    <Compile Include="EDataObject.cs" />
+    <Compile Include="GL\GENERALLEDGER.cs" />
+    <Compile Include="GL\GENERALLEDGERDAO.cs" />
+    <Compile Include="GL\GLAPPORTION.cs" />
+    <Compile Include="GL\GLAPPORTIONDAO.cs" />
+    <Compile Include="GL\GLAPPORTIONDETAIL.cs" />
+    <Compile Include="GL\GLAPPORTIONDETAILDAO.cs" />
+    <Compile Include="GL\GLAPPORTIONSUBDETAIL.cs" />
+    <Compile Include="GL\GLAPPORTIONSUBDETAILDAO.cs" />
+    <Compile Include="GL\GLBALANCE.cs" />
+    <Compile Include="GL\GLBALANCEDAO.cs" />
+    <Compile Include="GL\GLBALANCEDETAIL.cs" />
+    <Compile Include="GL\GLBALANCEDETAILDAO.cs" />
+    <Compile Include="GL\GLBUSINESS.cs" />
+    <Compile Include="GL\GLBUSINESSDAO.cs" />
+    <Compile Include="COMON\IV_ET\GLENTRY.cs" />
+    <Compile Include="COMON\IV_ET\GLENTRYDAO.cs" />
+    <Compile Include="GL\GLTRANSFERCONFIG.cs" />
+    <Compile Include="GL\GLTRANSFERCONFIGDAO.cs" />
+    <Compile Include="GL\GLTRANSFERCONFIGDETAIL.cs" />
+    <Compile Include="GL\GLTRANSFERCONFIGDETAILDAO.cs" />
+    <Compile Include="GL\GLTRANSFERCONFIGTYPE.cs" />
+    <Compile Include="GL\GLTRANSFERCONFIGTYPEDAO.cs" />
+    <Compile Include="GL\MarkReport\REPORTFORMULA.cs" />
+    <Compile Include="GL\MarkReport\REPORTFORMULADAO.cs" />
+    <Compile Include="GL\MarkReport\REPORTGROUPT.cs" />
+    <Compile Include="GL\MarkReport\REPORTGROUPTDAO.cs" />
+    <Compile Include="GL\MarkReport\REPORTMARK.cs" />
+    <Compile Include="GL\MarkReport\REPORTMARKDAO.cs" />
+    <Compile Include="GL\MarkReport\REPORTTYPE.cs" />
+    <Compile Include="GL\MarkReport\REPORTTYPEDAO.cs" />
+    <Compile Include="COMON\IV_ET\DECLARATION.cs" />
+    <Compile Include="COMON\IV_ET\DECLARATIONDAO.cs" />
+    <Compile Include="COMON\IV_ET\DECLARATIONDETAIL.cs" />
+    <Compile Include="COMON\IV_ET\DECLARATIONDETAILDAO.cs" />
+    <Compile Include="COMON\IV_ET\INVOICE.cs" />
+    <Compile Include="COMON\IV_ET\INVOICEDAO.cs" />
+    <Compile Include="COMON\IV_ET\INVOICEDETAIL.cs" />
+    <Compile Include="COMON\IV_ET\INVOICEDETAILDAO.cs" />
+    <Compile Include="COMON\IV_ET\PUBENTRY.cs" />
+    <Compile Include="COMON\IV_ET\PUBENTRYDAO.cs" />
+    <Compile Include="IC\ICADJUSMENTSTOCK.cs" />
+    <Compile Include="IC\ICADJUSMENTSTOCKDAO.cs" />
+    <Compile Include="IC\ICASSEMBLY.cs" />
+    <Compile Include="IC\ICASSEMBLYDAO.cs" />
+    <Compile Include="IC\ICASSEMBLYDETAIL.cs" />
+    <Compile Include="IC\ICASSEMBLYDETAILDAO.cs" />
+    <Compile Include="IC\ICASSEMBLYSUBDETAIL.cs" />
+    <Compile Include="IC\ICASSEMBLYSUBDETAILDAO.cs" />
+    <Compile Include="IC\ICCASH.cs" />
+    <Compile Include="IC\ICCASHDAO.cs" />
+    <Compile Include="IC\ICENTRY.cs" />
+    <Compile Include="IC\ICENTRYDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IC\ICINOUTSTOCK.cs" />
+    <Compile Include="IC\ICINOUTSTOCKDAO.cs" />
+    <Compile Include="IC\ICINOUTSTOCKDETAIL.cs" />
+    <Compile Include="IC\ICINOUTSTOCKDETAILDAO.cs" />
+    <Compile Include="IC\ICMOVE.cs" />
+    <Compile Include="IC\ICMOVEDAO.cs" />
+    <Compile Include="IC\ICMOVEDETAIL.cs" />
+    <Compile Include="IC\ICMOVEDETAILDAO.cs" />
+    <Compile Include="IC\ICOTHERCOST.cs" />
+    <Compile Include="IC\ICOTHERCOSTDAO.cs" />
+    <Compile Include="IC\ICOTHERDIMENTIONS.cs" />
+    <Compile Include="IC\ICOTHERDIMENTIONSDAO.cs" />
+    <Compile Include="IC\ICPLOT.cs" />
+    <Compile Include="IC\ICPLOTDAO.cs" />
+    <Compile Include="IC\ICPLOTTYPE.cs" />
+    <Compile Include="IC\ICPLOTTYPEDAO.cs" />
+    <Compile Include="IC\ICPURPOSEUSE.cs" />
+    <Compile Include="IC\ICPURPOSEUSEDAO.cs" />
+    <Compile Include="IC\ICSTOCK.cs" />
+    <Compile Include="IC\ICSTOCKDAO.cs" />
+    <Compile Include="IC\ICSTOCKDIMENTIONS.cs" />
+    <Compile Include="IC\ICSTOCKDIMENTIONSDAO.cs" />
+    <Compile Include="IC\ICSTOCKJOIN.cs" />
+    <Compile Include="IC\ICSTOCKJOINDAO.cs" />
+    <Compile Include="IC\ICSTOCKJOINRELATION.cs" />
+    <Compile Include="IC\ICSTOCKJOINRELATIONDAO.cs" />
+    <Compile Include="IC\ICSTOREWARRANTY.cs" />
+    <Compile Include="IC\ICSTOREWARRANTYDAO.cs" />
+    <Compile Include="IC\ICWARRANTYCODE.cs" />
+    <Compile Include="IC\ICWARRANTYCODEDAO.cs" />
+    <Compile Include="COMON\PLAN\PUBPLAN.cs" />
+    <Compile Include="COMON\PLAN\PUBPLANDAO.cs" />
+    <Compile Include="IC\INVENTORY.cs" />
+    <Compile Include="IC\INVENTORYDAO.cs" />
+    <Compile Include="IC\INVENTORYDETAIL.cs" />
+    <Compile Include="IC\INVENTORYDETAILDAO.cs" />
+    <Compile Include="META\ACC\ACCOUNTOFSYS.cs" />
+    <Compile Include="META\ACC\ACCOUNTOFSYSDAO.cs" />
+    <Compile Include="META\ACC\CARDTYPE.cs" />
+    <Compile Include="META\ACC\CARDTYPEDAO.cs" />
+    <Compile Include="META\ACC\COSTINDEX.cs" />
+    <Compile Include="META\ACC\COSTINDEXDAO.cs" />
+    <Compile Include="META\ACC\COSTINDEXTYPE.cs" />
+    <Compile Include="META\ACC\COSTINDEXTYPEDAO.cs" />
+    <Compile Include="META\ACC\FINANCYCICLE.cs" />
+    <Compile Include="META\ACC\FINANCYCICLEDAO.cs" />
+    <Compile Include="META\ACC\ORGACCOUNT.cs" />
+    <Compile Include="META\ACC\ORGACCOUNTDAO.cs" />
+    <Compile Include="META\ACC\PUBACCOUNT.cs" />
+    <Compile Include="META\ACC\PUBACCOUNTDAO.cs" />
+    <Compile Include="META\ACC\PUBACCOUNTGROUP.cs" />
+    <Compile Include="META\ACC\PUBACCOUNTGROUPDAO.cs" />
+    <Compile Include="META\ACC\PUBACCOUNTTYPE.cs" />
+    <Compile Include="META\ACC\PUBACCOUNTTYPEDAO.cs" />
+    <Compile Include="META\ACC\PUBBANK.cs" />
+    <Compile Include="META\ACC\PUBBANKDAO.cs" />
+    <Compile Include="META\ACC\PUBCOSTPRICEINOUT.cs" />
+    <Compile Include="META\ACC\PUBCOSTPRICEINOUTDAO.cs" />
+    <Compile Include="META\ACC\PUBCURRENCY.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="META\ACC\PUBCURRENCYDAO.cs" />
+    <Compile Include="META\ACC\PUBCURRENCYRATE.cs" />
+    <Compile Include="META\ACC\PUBCURRENCYRATEDAO.cs" />
+    <Compile Include="META\ACC\PUBPAYMENTMETHOD.cs" />
+    <Compile Include="META\ACC\PUBPAYMENTMETHODDAO.cs" />
+    <Compile Include="META\ACC\PUBPAYMENTTERM.cs" />
+    <Compile Include="META\ACC\PUBPAYMENTTERMDAO.cs" />
+    <Compile Include="META\ACC\PUBPAYMENTTERMDETAIL.cs" />
+    <Compile Include="META\ACC\PUBPAYMENTTERMDETAILDAO.cs" />
+    <Compile Include="META\ACC\PUBPAYMENTTERMTYPE.cs" />
+    <Compile Include="META\ACC\PUBPAYMENTTERMTYPEDAO.cs" />
+    <Compile Include="META\ACC\PUBYEAR.cs" />
+    <Compile Include="META\ACC\PUBYEARDAO.cs" />
+    <Compile Include="META\CONTRACT\PUBCONTRACT.cs" />
+    <Compile Include="META\CONTRACT\PUBCONTRACTDAO.cs" />
+    <Compile Include="META\CONTRACT\PUBCONTRACTDETAIL.cs" />
+    <Compile Include="META\CONTRACT\PUBCONTRACTDETAILDAO.cs" />
+    <Compile Include="META\CONTRACT\PUBCONTRACTGROUP.cs" />
+    <Compile Include="META\CONTRACT\PUBCONTRACTGROUPDAO.cs" />
+    <Compile Include="META\Extent\BUSSINESTYPE.cs" />
+    <Compile Include="META\Extent\BUSSINESTYPEDAO.cs" />
+    <Compile Include="META\Extent\PUBBATCH.cs" />
+    <Compile Include="META\Extent\PUBBATCHDAO.cs" />
+    <Compile Include="META\Extent\PUBBATCHTYPE.cs" />
+    <Compile Include="META\Extent\PUBBATCHTYPEDAO.cs" />
+    <Compile Include="META\Extent\PUBCOUNTRY.cs" />
+    <Compile Include="META\Extent\PUBCOUNTRYDAO.cs" />
+    <Compile Include="META\Extent\PUBDEGREEDETAIL.cs" />
+    <Compile Include="META\Extent\PUBDEGREEDETAILDAO.cs" />
+    <Compile Include="META\Extent\PUBDESCRIPTORITEM.cs" />
+    <Compile Include="META\Extent\PUBDESCRIPTORITEMDAO.cs" />
+    <Compile Include="META\Extent\PUBERROR.cs" />
+    <Compile Include="META\Extent\PUBERRORDAO.cs" />
+    <Compile Include="META\Extent\PUBPLACE.cs" />
+    <Compile Include="META\Extent\PUBPLACEDAO.cs" />
+    <Compile Include="META\Extent\PUBPRICETYPE.cs" />
+    <Compile Include="META\Extent\PUBPRICETYPEDAO.cs" />
+    <Compile Include="META\Extent\PUBPROVINCE.cs" />
+    <Compile Include="META\Extent\PUBPROVINCEDAO.cs" />
+    <Compile Include="META\Extent\PUNSCHEDULE.cs" />
+    <Compile Include="META\Extent\PUNSCHEDULEDAO.cs" />
+    <Compile Include="META\Item\ATBRANGE.cs" />
+    <Compile Include="META\Item\ATBRANGEDAO.cs" />
+    <Compile Include="META\Item\ATDIMENTIONS.cs" />
+    <Compile Include="META\Item\ATDIMENTIONSDAO.cs" />
+    <Compile Include="META\Item\ATTRIBUTEJOIN.cs" />
+    <Compile Include="META\Item\ATTRIBUTEJOINDAO.cs" />
+    <Compile Include="META\Item\ICMATERIAL.cs" />
+    <Compile Include="META\Item\ICMATERIALDAO.cs" />
+    <Compile Include="META\Item\ICMATERIALIO.cs" />
+    <Compile Include="META\Item\ICMATERIALIODAO.cs" />
+    <Compile Include="META\Item\ITEMSPOSITION.cs" />
+    <Compile Include="META\Item\ITEMSPOSITIONDAO.cs" />
+    <Compile Include="META\Item\ITEMTYPE.cs" />
+    <Compile Include="META\Item\ITEMTYPEDAO.cs" />
+    <Compile Include="META\Item\PUBATTRIBUTETYPE.cs" />
+    <Compile Include="META\Item\PUBATTRIBUTETYPEDAO.cs" />
+    <Compile Include="META\Item\PUBATTRIBUTEUNIT.cs" />
+    <Compile Include="META\Item\PUBATTRIBUTEUNITDAO.cs" />
+    <Compile Include="META\Item\PUBBOM.cs" />
+    <Compile Include="META\Item\PUBBOMDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="META\Item\PUBBOMDETAIL.cs" />
+    <Compile Include="META\Item\PUBBOMDETAILDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="META\Item\PUBBOMOUTPUT.cs" />
+    <Compile Include="META\Item\PUBBOMOUTPUTDAO.cs" />
+    <Compile Include="META\Item\PUBBOMSUBDETAIL.cs" />
+    <Compile Include="META\Item\PUBBOMSUBDETAILDAO.cs" />
+    <Compile Include="META\Item\PUBBOMVESION.cs" />
+    <Compile Include="META\Item\PUBBOMVESIONDAO.cs" />
+    <Compile Include="META\Item\PUBITEMOFGROUP.cs" />
+    <Compile Include="META\Item\PUBITEMOFGROUPDAO.cs" />
+    <Compile Include="META\Item\PUBITEMS.cs" />
+    <Compile Include="META\Item\PUBITEMSATTRIBUTE.cs" />
+    <Compile Include="META\Item\PUBITEMSATTRIBUTEDAO.cs" />
+    <Compile Include="META\Item\PUBITEMSCATEGORY.cs" />
+    <Compile Include="META\Item\PUBITEMSCATEGORYDAO.cs" />
+    <Compile Include="META\Item\PUBITEMSDAO.cs" />
+    <Compile Include="META\Item\PUBITEMSGROUP.cs" />
+    <Compile Include="META\Item\PUBITEMSGROUPDAO.cs" />
+    <Compile Include="META\Item\PUBITEMSMANU.cs" />
+    <Compile Include="META\Item\PUBITEMSMANUDAO.cs" />
+    <Compile Include="META\Item\PUBITEMSUPPLIER.cs" />
+    <Compile Include="META\Item\PUBITEMSUPPLIERDAO.cs" />
+    <Compile Include="META\Item\PUBITEM_RES.cs" />
+    <Compile Include="META\Item\PUBITEM_RESDAO.cs" />
+    <Compile Include="META\Item\PUBLOATTRIBUTEINFO.cs" />
+    <Compile Include="META\Item\PUBLOATTRIBUTEINFODAO.cs" />
+    <Compile Include="META\Item\PUBMANUFACTURER.cs" />
+    <Compile Include="META\Item\PUBMANUFACTURERDAO.cs" />
+    <Compile Include="META\Item\PUBPACKING.cs" />
+    <Compile Include="META\Item\PUBPACKINGDAO.cs" />
+    <Compile Include="META\Item\PUBPACKINGTYPE.cs" />
+    <Compile Include="META\Item\PUBPACKINGTYPEDAO.cs" />
+    <Compile Include="META\Item\PUBUOM.cs" />
+    <Compile Include="META\Item\PUBUOMCHANGE.cs" />
+    <Compile Include="META\Item\PUBUOMCHANGEDAO.cs" />
+    <Compile Include="META\Item\PUBUOMDAO.cs" />
+    <Compile Include="META\Item\PUBWAREHOUSE.cs" />
+    <Compile Include="META\Item\PUBWAREHOUSEDAO.cs" />
+    <Compile Include="META\Item\PUBWAREHOUSETYPE.cs" />
+    <Compile Include="META\Item\PUBWAREHOUSETYPEDAO.cs" />
+    <Compile Include="META\Item\SERRIALJOIN.cs" />
+    <Compile Include="META\Log\ErrorHandlerLog.cs" />
+    <Compile Include="META\Log\ErrorHandlerLogDAO.cs" />
+    <Compile Include="META\Log\History.cs" />
+    <Compile Include="META\OBJ\PUBCAREER.cs" />
+    <Compile Include="META\OBJ\PUBCAREERDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJECT.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTEMPLOY.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTEMPLOYDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTGROUP.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTGROUPDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTORG.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTORGCAREER.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTORGCAREERDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTORGDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTPAYMENT.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTPAYMENTDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTPERSON.cs" />
+    <Compile Include="META\OBJ\PUBOBJECTPERSONDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJGROUP.cs" />
+    <Compile Include="META\OBJ\PUBOBJGROUPDAO.cs" />
+    <Compile Include="META\OBJ\PUBOBJRELATION.cs" />
+    <Compile Include="META\OBJ\PUBOBJRELATIONDAO.cs" />
+    <Compile Include="META\OBJ\PUBORGTYPE.cs" />
+    <Compile Include="META\OBJ\PUBORGTYPEDAO.cs" />
+    <Compile Include="META\OBJ\PUBPOSITION.cs" />
+    <Compile Include="META\OBJ\PUBPOSITIONDAO.cs" />
+    <Compile Include="META\OBJ\PUBPRIORITY.cs" />
+    <Compile Include="META\OBJ\PUBPRIORITYDAO.cs" />
+    <Compile Include="META\OBJ\PUBPROJECT.cs" />
+    <Compile Include="META\OBJ\PUBPROJECTDAO.cs" />
+    <Compile Include="META\OBJ\PUBPROJECTGROUP.cs" />
+    <Compile Include="META\OBJ\PUBPROJECTGROUPDAO.cs" />
+    <Compile Include="META\OBJ\PUBPROJECTTYPE.cs" />
+    <Compile Include="META\OBJ\PUBPROJECTTYPEDAO.cs" />
+    <Compile Include="META\STATUS\PUBSTATUS.cs" />
+    <Compile Include="META\STATUS\PUBSTATUSDAO.cs" />
+    <Compile Include="META\System\BarCode\BARCODE.cs" />
+    <Compile Include="META\System\BarCode\BARCODEDAO.cs" />
+    <Compile Include="META\System\BarCode\BARCODEDEFINE.cs" />
+    <Compile Include="META\System\BarCode\BARCODEDEFINEDAO.cs" />
+    <Compile Include="META\System\BarCode\BARCODETYPE.cs" />
+    <Compile Include="META\System\BarCode\BARCODETYPEDAO.cs" />
+    <Compile Include="META\System\BarCode\DATATYPE.cs" />
+    <Compile Include="META\System\BarCode\DATATYPEDAO.cs" />
+    <Compile Include="META\System\CONTROL.cs" />
+    <Compile Include="META\System\CONTROLDAO.cs" />
+    <Compile Include="META\System\ControlInPage.cs" />
+    <Compile Include="META\System\CONTROLROLE.cs" />
+    <Compile Include="META\System\CONTROLROLEDAO.cs" />
+    <Compile Include="META\System\CONTROLTYPE.cs" />
+    <Compile Include="META\System\CONTROLTYPEDAO.cs" />
+    <Compile Include="META\System\CTATRIBULTE.cs" />
+    <Compile Include="META\System\CTATRIBULTEDAO.cs" />
+    <Compile Include="META\System\GlobalConfig.cs" />
+    <Compile Include="META\System\ICCONFIG.cs" />
+    <Compile Include="META\System\ICCONFIGDAO.cs" />
+    <Compile Include="META\System\LANGUAGE.cs" />
+    <Compile Include="META\System\LANGUAGEDAO.cs" />
+    <Compile Include="META\System\LOGINHISTORY.cs" />
+    <Compile Include="META\System\LOGINHISTORYDAO.cs" />
+    <Compile Include="META\System\LoginInfor.cs" />
+    <Compile Include="META\System\MASSAGER.cs" />
+    <Compile Include="META\System\MASSAGERDAO.cs" />
+    <Compile Include="META\System\MenuForLang.cs" />
+    <Compile Include="META\System\MenuForLangDAO.cs" />
+    <Compile Include="META\System\MenuRole.cs" />
+    <Compile Include="META\System\MenuRoleDAO.cs" />
+    <Compile Include="META\System\MESSAGERFORLANG.cs" />
+    <Compile Include="META\System\MESSAGERFORLANGDAO.cs" />
+    <Compile Include="META\System\PAGE.cs" />
+    <Compile Include="META\System\PAGEDAO.cs" />
+    <Compile Include="META\System\PAGEMESSAGER.cs" />
+    <Compile Include="META\System\PAGEMESSAGERDAO.cs" />
+    <Compile Include="META\System\PUBMENU.cs" />
+    <Compile Include="META\System\PUBMENUDAO.cs" />
+    <Compile Include="META\System\PUBMENUTRL.cs" />
+    <Compile Include="META\System\PUBMENUTRLDAO.cs" />
+    <Compile Include="META\System\SUBSYSTEM.cs" />
+    <Compile Include="META\System\SUBSYSTEMDAO.cs" />
+    <Compile Include="META\System\SYSTEMCONFIG.cs" />
+    <Compile Include="META\System\SYSTEMCONFIGDAO.cs" />
+    <Compile Include="META\System\USERCONTROL.cs" />
+    <Compile Include="META\System\USERCONTROLDAO.cs" />
+    <Compile Include="META\System\UserGroup.cs" />
+    <Compile Include="META\System\UserGroupDAO.cs" />
+    <Compile Include="META\System\USERMENU.cs" />
+    <Compile Include="META\System\USERMENUDAO.cs" />
+    <Compile Include="META\System\UserOfGroup.cs" />
+    <Compile Include="META\System\UserOfGroupDAO.cs" />
+    <Compile Include="META\System\Users.cs" />
+    <Compile Include="META\System\UsersDAO.cs" />
+    <Compile Include="META\TAX\PUBTAX.cs" />
+    <Compile Include="META\TAX\PUBTAXDAO.cs" />
+    <Compile Include="META\TAX\PUBTAXRATE.cs" />
+    <Compile Include="META\TAX\PUBTAXRATEDAO.cs" />
+    <Compile Include="META\TimeService\Jobs.cs" />
+    <Compile Include="META\TimeService\JobsDAO.cs" />
+    <Compile Include="META\TimeService\JobsScheduler.cs" />
+    <Compile Include="META\TimeService\JobsSchedulerDAO.cs" />
+    <Compile Include="META\TimeService\PARRAMTER.cs" />
+    <Compile Include="META\TimeService\PARRAMTERDAO.cs" />
+    <Compile Include="META\TimeService\REPORTAUTO.cs" />
+    <Compile Include="META\TimeService\REPORTAUTODAO.cs" />
+    <Compile Include="META\TimeService\REPORTPARRAMTER.cs" />
+    <Compile Include="META\TimeService\REPORTPARRAMTERDAO.cs" />
+    <Compile Include="META\TimeService\Scheduler.cs" />
+    <Compile Include="META\TimeService\SchedulerDAO.cs" />
+    <Compile Include="META\TimeService\Steps.cs" />
+    <Compile Include="META\TimeService\StepsDAO.cs" />
+    <Compile Include="META\TimeService\TaskQueue.cs" />
+    <Compile Include="PUB\Report.cs" />
+    <Compile Include="PUB\TranferData.cs" />
+    <Compile Include="RES\DBCONNECT.cs" />
+    <Compile Include="RES\LOGERROR.cs" />
+    <Compile Include="RES\LOGERRORDAO.cs" />
+    <Compile Include="RES\PRICECONDITIONSERVICE.cs" />
+    <Compile Include="RES\PRICECONDITIONSERVICEDAO.cs" />
+    <Compile Include="RES\RESACTION.cs" />
+    <Compile Include="RES\RESACTIONDAO.cs" />
+    <Compile Include="RES\RESANNOUNCEMENT.cs" />
+    <Compile Include="RES\RESANNOUNCEMENTDAO.cs" />
+    <Compile Include="RES\RESANNOUNCEMENTTYPE.cs" />
+    <Compile Include="RES\RESANNOUNCEMENTTYPEDAO.cs" />
+    <Compile Include="RES\RESAREAMANAGESTAFF.cs" />
+    <Compile Include="RES\RESAREAMANAGESTAFFDAO.cs" />
+    <Compile Include="RES\RESBALANCE.cs" />
+    <Compile Include="RES\RESBALANCEDAO.cs" />
+    <Compile Include="RES\RESCONVERTPOINT.cs" />
+    <Compile Include="RES\RESCONVERTPOINTDAO.cs" />
+    <Compile Include="RES\RESDELIVERYINFOR.cs" />
+    <Compile Include="RES\RESDELIVERYINFORDAO.cs" />
+    <Compile Include="RES\RESDISCOUNTTYPE_APP.cs" />
+    <Compile Include="RES\RESDISCOUNTTYPE_APPDAO.cs" />
+    <Compile Include="RES\RESDISCOUNTTYPE_TIMER.cs" />
+    <Compile Include="RES\RESDISCOUNTTYPE_TIMERDAO.cs" />
+    <Compile Include="RES\RESDISCOUNT_DATE.cs" />
+    <Compile Include="RES\RESDISCOUNT_DATEDAO.cs" />
+    <Compile Include="RES\RESDISCOUNT_ITEMPROMOTION.cs" />
+    <Compile Include="RES\RESDISCOUNT_ITEMPROMOTIONDAO.cs" />
+    <Compile Include="RES\RESDISCOUNT_OBJECT.cs" />
+    <Compile Include="RES\RESDISCOUNT_OBJECTDAO.cs" />
+    <Compile Include="RES\RESHISTORYREWARD.cs" />
+    <Compile Include="RES\RESHISTORYREWARDDAO.cs" />
+    <Compile Include="RES\RESINSTALLKITCHEN_GROUP.cs" />
+    <Compile Include="RES\RESINSTALLKITCHEN_GROUPDAO.cs" />
+    <Compile Include="RES\RESINVOICE.cs" />
+    <Compile Include="RES\RESINVOICEDAO.cs" />
+    <Compile Include="RES\RESIPLIST.cs" />
+    <Compile Include="RES\RESIPLISTDAO.cs" />
+    <Compile Include="RES\RESKITCHENMESSAGE.cs" />
+    <Compile Include="RES\RESKITCHENMESSAGEDAO.cs" />
+    <Compile Include="RES\RESLOGERROR.cs" />
+    <Compile Include="RES\RESLOGERRORDAO.cs" />
+    <Compile Include="RES\RESLOYALTYCARD.cs" />
+    <Compile Include="RES\RESLOYALTYCARDDAO.cs" />
+    <Compile Include="RES\RESMESSAGE.cs" />
+    <Compile Include="RES\RESMESSAGEDAO.cs" />
+    <Compile Include="RES\RESORDER.cs" />
+    <Compile Include="RES\RESORDERDAO.cs" />
+    <Compile Include="RES\RESORDERDETAIL.cs" />
+    <Compile Include="RES\RESORDERDETAILDAO.cs" />
+    <Compile Include="RES\RESORDERDETAIL_SET.cs" />
+    <Compile Include="RES\RESORDERDETAIL_SETDAO.cs" />
+    <Compile Include="RES\RESPOS.cs" />
+    <Compile Include="RES\RESPOSCONFIG.cs" />
+    <Compile Include="RES\RESPOSCONFIGDAO.cs" />
+    <Compile Include="RES\RESPOSDAO.cs" />
+    <Compile Include="RES\RESPRICESERVICESDETAIL.cs" />
+    <Compile Include="RES\RESPRICESERVICESDETAILDAO.cs" />
+    <Compile Include="RES\RESPRINTERBACKUP.cs" />
+    <Compile Include="RES\RESPRINTERBACKUPDAO.cs" />
+    <Compile Include="RES\RESPROMOCARD.cs" />
+    <Compile Include="RES\RESPROMOCARDDAO.cs" />
+    <Compile Include="RES\RESRELATION.cs" />
+    <Compile Include="RES\RESRELATIONDAO.cs" />
+    <Compile Include="RES\RESSERVICECHARGE.cs" />
+    <Compile Include="RES\RESSERVICECHARGEDAO.cs" />
+    <Compile Include="RES\RESSHIFTCOUNTER_DETAIL.cs" />
+    <Compile Include="RES\RESSHIFTCOUNTER_DETAILDAO.cs" />
+    <Compile Include="RES\RESSOLDOUTWARNING.cs" />
+    <Compile Include="RES\RESSOLDOUTWARNINGDAO.cs" />
+    <Compile Include="RES\RESTRANFERLINKNOTE.cs" />
+    <Compile Include="RES\RESTRANFERLINKNOTEDAO.cs" />
+    <Compile Include="RES\RESUNITCURRENCY.cs" />
+    <Compile Include="RES\RESUNITCURRENCYDAO.cs" />
+    <Compile Include="RES\RESVIRTUALCUSTOMER.cs" />
+    <Compile Include="RES\RESVIRTUALCUSTOMERDAO.cs" />
+    <Compile Include="RES\RESVOIDITEMCOND_GROUP.cs" />
+    <Compile Include="RES\RESVOIDITEMCOND_GROUPDAO.cs" />
+    <Compile Include="RES\RESVOUCHER.cs" />
+    <Compile Include="RES\RESVOUCHERDAO.cs" />
+    <Compile Include="RES\TABLEPRICESERVICE.cs" />
+    <Compile Include="RES\TABLEPRICESERVICEDAO.cs" />
+    <Compile Include="RES\TABLEPRICESERVICE_PRICECONDITION.cs" />
+    <Compile Include="RES\TABLEPRICESERVICE_PRICECONDITIONDAO.cs" />
+    <Compile Include="SO\CONDITIONDETAIL.cs" />
+    <Compile Include="SO\CONDITIONDETAILDAO.cs" />
+    <Compile Include="SO\CUSTOMERSERVICESDAO.cs" />
+    <Compile Include="SO\PRICECONDITION.cs" />
+    <Compile Include="SO\PRICECONDITIONDAO.cs" />
+    <Compile Include="SO\PUBSALEPRICE.cs" />
+    <Compile Include="SO\PUBSALEPRICEDAO.cs" />
+    <Compile Include="PO\PURPLAN.cs" />
+    <Compile Include="PO\PURPLANDAO.cs" />
+    <Compile Include="PO\PURPLANDETAIL.cs" />
+    <Compile Include="PO\PURPLANDETAILDAO.cs" />
+    <Compile Include="PO\PURREQUEST.cs" />
+    <Compile Include="PO\PURREQUESTDAO.cs" />
+    <Compile Include="PO\PURREQUESTDETAIL.cs" />
+    <Compile Include="PO\PURREQUESTDETAILDAO.cs" />
+    <Compile Include="PUB\SEARCHDAO.cs" />
+    <Compile Include="REQ\PROPPAYDETAIL.cs" />
+    <Compile Include="REQ\PROPPAYDETAILDAO.cs" />
+    <Compile Include="REQ\PUBPROPOSEPAY.cs" />
+    <Compile Include="REQ\PUBPROPOSEPAYDAO.cs" />
+    <Compile Include="RES\RESAREA.cs" />
+    <Compile Include="RES\RESAREADAO.cs" />
+    <Compile Include="RES\RESBUSINESSTYPE.cs" />
+    <Compile Include="RES\RESBUSINESSTYPEDAO.cs" />
+    <Compile Include="RES\RESCHOICECATEGORY.cs" />
+    <Compile Include="RES\RESCHOICECATEGORYDAO.cs" />
+    <Compile Include="RES\RESCHOICESET.cs" />
+    <Compile Include="RES\RESCHOICESETDAO.cs" />
+    <Compile Include="RES\RESCOUNTER.cs" />
+    <Compile Include="RES\RESCOUNTERDAO.cs" />
+    <Compile Include="RES\RESCREATEDEFAULT.cs" />
+    <Compile Include="RES\RESCREATEDEFAULTDAO.cs" />
+    <Compile Include="RES\RESCUSTOMERCARD.cs" />
+    <Compile Include="RES\RESCUSTOMERCARDDAO.cs" />
+    <Compile Include="RES\RESCUSTOMERSDEBT.cs" />
+    <Compile Include="RES\RESCUSTOMERSDEBTDAO.cs" />
+    <Compile Include="RES\RESCUSTOMERVIPCARD.cs" />
+    <Compile Include="RES\RESCUSTOMERVIPCARDDAO.cs" />
+    <Compile Include="RES\RESDISCOUNTTYPE.cs" />
+    <Compile Include="RES\RESDISCOUNTTYPEDAO.cs" />
+    <Compile Include="RES\RESDISCOUNT_GROUPITEM.cs" />
+    <Compile Include="RES\RESDISCOUNT_GROUPITEMDAO.cs" />
+    <Compile Include="RES\RESDISCOUNT_HOUR.cs" />
+    <Compile Include="RES\RESDISCOUNT_HOURAMOUNT.cs" />
+    <Compile Include="RES\RESDISCOUNT_HOURAMOUNTDAO.cs" />
+    <Compile Include="RES\RESDISCOUNT_HOURDAO.cs" />
+    <Compile Include="RES\RESDISCOUNT_ITEM.cs" />
+    <Compile Include="RES\RESDISCOUNT_ITEMDAO.cs" />
+    <Compile Include="RES\RESDISCOUNT_TICKET.cs" />
+    <Compile Include="RES\RESDISCOUNT_TICKETDAO.cs" />
+    <Compile Include="RES\RESDOCUMENT.cs" />
+    <Compile Include="RES\RESDOCUMENTDAO.cs" />
+    <Compile Include="RES\RESGIFTCARD.cs" />
+    <Compile Include="RES\RESGIFTCARDDAO.cs" />
+    <Compile Include="RES\RESGIFTCARDTYPE.cs" />
+    <Compile Include="RES\RESGIFTCARDTYPEDAO.cs" />
+    <Compile Include="RES\RESGIFTCARD_APPLYBIZ.cs" />
+    <Compile Include="RES\RESGIFTCARD_APPLYBIZDAO.cs" />
+    <Compile Include="RES\RESHISTORYCHANGETICKET.cs" />
+    <Compile Include="RES\RESHISTORYCHANGETICKETDAO.cs" />
+    <Compile Include="RES\RESINCIDENTSSALE.cs" />
+    <Compile Include="RES\RESINCIDENTSSALEDAO.cs" />
+    <Compile Include="RES\RESINSTALLKITCHEN.cs" />
+    <Compile Include="RES\RESINSTALLKITCHENDAO.cs" />
+    <Compile Include="RES\RESKITCHEN.cs" />
+    <Compile Include="RES\RESKITCHENDAO.cs" />
+    <Compile Include="RES\RESMOREREQUEST_ABBREVIATE.cs" />
+    <Compile Include="RES\RESMOREREQUEST_ABBREVIATEDAO.cs" />
+    <Compile Include="RES\RESPAYMENT.cs" />
+    <Compile Include="RES\RESPAYMENTDAO.cs" />
+    <Compile Include="RES\RESPRICESERVICES.cs" />
+    <Compile Include="RES\RESPRICESERVICESDAO.cs" />
+    <Compile Include="RES\RESPRIORITYITEM.cs" />
+    <Compile Include="RES\RESPRIORITYITEMDAO.cs" />
+    <Compile Include="RES\RESRECEIPT.cs" />
+    <Compile Include="RES\RESRECEIPTDAO.cs" />
+    <Compile Include="RES\RESRECIPE.cs" />
+    <Compile Include="RES\RESRECIPEDAO.cs" />
+    <Compile Include="RES\RESREPORTS.cs" />
+    <Compile Include="RES\RESREPORTSDAO.cs" />
+    <Compile Include="RES\RESSETMENU.cs" />
+    <Compile Include="RES\RESSETMENUDAO.cs" />
+    <Compile Include="RES\RESSHIFT.cs" />
+    <Compile Include="RES\RESSHIFTCOUNTER.cs" />
+    <Compile Include="RES\RESSHIFTCOUNTERDAO.cs" />
+    <Compile Include="RES\RESSHIFTDAO.cs" />
+    <Compile Include="RES\RESSTYLE.cs" />
+    <Compile Include="RES\RESSTYLEDAO.cs" />
+    <Compile Include="RES\RESTABLE.cs" />
+    <Compile Include="RES\RESTABLEDAO.cs" />
+    <Compile Include="RES\RESTABLETYPE.cs" />
+    <Compile Include="RES\RESTABLETYPEDAO.cs" />
+    <Compile Include="RES\RESTICKET.cs" />
+    <Compile Include="RES\RESTICKETBUFFET.cs" />
+    <Compile Include="RES\RESTICKETBUFFETDAO.cs" />
+    <Compile Include="RES\RESTICKETDAO.cs" />
+    <Compile Include="RES\RESTICKETITEM.cs" />
+    <Compile Include="RES\RESTICKETITEMDAO.cs" />
+    <Compile Include="RES\RESTICKETITEMDETAIL.cs" />
+    <Compile Include="RES\RESTICKETITEMDETAILDAO.cs" />
+    <Compile Include="RES\RESTICKET_HISTORYPRINTED.cs" />
+    <Compile Include="RES\RESTICKET_HISTORYPRINTEDDAO.cs" />
+    <Compile Include="RES\RESTICKET_PAYMENTDETAILS.cs" />
+    <Compile Include="RES\RESTICKET_PAYMENTDETAILSDAO.cs" />
+    <Compile Include="RES\RESTICKET_TABLE.cs" />
+    <Compile Include="RES\RESTICKET_TABLEDAO.cs" />
+    <Compile Include="RES\RESTIMETYPE.cs" />
+    <Compile Include="RES\RESTIMETYPEDAO.cs" />
+    <Compile Include="RES\RESTRANSACTION.cs" />
+    <Compile Include="RES\RESTRANSACTIONDAO.cs" />
+    <Compile Include="RES\RESTRANSACTIONTYPE.cs" />
+    <Compile Include="RES\RESTRANSACTIONTYPEDAO.cs" />
+    <Compile Include="RES\RESVIPCARDTYPE.cs" />
+    <Compile Include="RES\RESVIPCARDTYPEDAO.cs" />
+    <Compile Include="RES\RESVIPCARD_APPLYBIZ.cs" />
+    <Compile Include="RES\RESVIPCARD_APPLYBIZDAO.cs" />
+    <Compile Include="SHIP\PUBSHIPMETHOD.cs" />
+    <Compile Include="SHIP\PUBSHIPMETHODDAO.cs" />
+    <Compile Include="SHIP\PUBSHIPPING.cs" />
+    <Compile Include="SHIP\PUBSHIPPINGDAO.cs" />
+    <Compile Include="PO\PURORDER.cs" />
+    <Compile Include="PO\PURORDERDAO.cs" />
+    <Compile Include="PO\PURORDERDETAIL.cs" />
+    <Compile Include="PO\PURORDERDETAILDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SHIP\PUBSHIPPINGPACK.cs" />
+    <Compile Include="SHIP\PUBSHIPPINGPACKDAO.cs" />
+    <Compile Include="SHIP\SHIPPINGRELATION.cs" />
+    <Compile Include="SHIP\SHIPPINGRELATIONDAO.cs" />
+    <Compile Include="SO\SALDETAIL.cs" />
+    <Compile Include="SO\SALDETAILDAO.cs" />
+    <Compile Include="SO\SALORDER.cs" />
+    <Compile Include="SO\SALORDERDAO.cs" />
+    <Compile Include="SO\SOQUOTE.cs" />
+    <Compile Include="SO\SOQUOTEDAO.cs" />
+    <Compile Include="SO\SOQUOTEDETAIL.cs" />
+    <Compile Include="SO\SOQUOTEDETAILDAO.cs" />
+    <Compile Include="SO\TABLEPRICE.cs" />
+    <Compile Include="SO\TABLEPRICEDAO.cs" />
+    <Compile Include="SO\TABLEPRICE_RESBUSTYPE.cs" />
+    <Compile Include="SO\TABLEPRICE_RESBUSTYPEDAO.cs" />
+    <Compile Include="SqlMessager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vnyi.DataProvider\vnyi.DataProvider.csproj">
+      <Project>{B5919E54-1EC0-4189-92A6-D7A431D853D3}</Project>
+      <Name>vnyi.DataProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
