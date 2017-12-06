@@ -1,0 +1,10 @@
+D:\QuickDecision\Source Code\DLL\vnyi.ErrorHandler.dll
+D:\QuickDecision\Source Code\DLL\vnyi.ErrorHandler.pdb
+D:\QuickDecision\Source Code\vnyi.ErrorHandler\obj\Debug\ResolveAssemblyReference.cache
+D:\QuickDecision\Source Code\vnyi.ErrorHandler\obj\Debug\vnyi.ErrorHandler.dll
+D:\QuickDecision\Source Code\vnyi.ErrorHandler\obj\Debug\vnyi.ErrorHandler.pdb
+D:\Program Files\QuickDecision\Source Code\DLL\vnyi.ErrorHandler.dll
+D:\Program Files\QuickDecision\Source Code\DLL\vnyi.ErrorHandler.pdb
+D:\Program Files\QuickDecision\Source Code\vnyi.ErrorHandler\obj\Debug\ResolveAssemblyReference.cache
+D:\Program Files\QuickDecision\Source Code\vnyi.ErrorHandler\obj\Debug\vnyi.ErrorHandler.dll
+D:\Program Files\QuickDecision\Source Code\vnyi.ErrorHandler\obj\Debug\vnyi.ErrorHandler.pdb
